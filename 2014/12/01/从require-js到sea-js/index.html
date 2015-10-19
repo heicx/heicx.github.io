@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>从require.js到sea.js | heicx_sudo&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Part1 定位介绍
+从 requirejs.org 首页可以得知，RequireJS 是一个 JavaScript 文件和模块加载器，特别为浏览器优化，同时也可运行在 Rhino 和 Node 环境中。
+SeaJS 的定位是一个适用于浏览器端的 JavaScript 模块加载器。
+
+不要小看这两句话，任何类库/框架的定位，或者说愿景/目标，最终会决定该类库/框架的方方面面。比如：RequireJ">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从require.js到sea.js">
+<meta property="og:url" content="http://tcka.cn/2014/12/01/从require-js到sea-js/index.html">
+<meta property="og:site_name" content="heicx_sudo's blog">
+<meta property="og:description" content="Part1 定位介绍
+从 requirejs.org 首页可以得知，RequireJS 是一个 JavaScript 文件和模块加载器，特别为浏览器优化，同时也可运行在 Rhino 和 Node 环境中。
+SeaJS 的定位是一个适用于浏览器端的 JavaScript 模块加载器。
+
+不要小看这两句话，任何类库/框架的定位，或者说愿景/目标，最终会决定该类库/框架的方方面面。比如：RequireJ">
+<meta property="og:updated_time" content="2015-10-09T08:33:26.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="从require.js到sea.js">
+<meta name="twitter:description" content="Part1 定位介绍
+从 requirejs.org 首页可以得知，RequireJS 是一个 JavaScript 文件和模块加载器，特别为浏览器优化，同时也可运行在 Rhino 和 Node 环境中。
+SeaJS 的定位是一个适用于浏览器端的 JavaScript 模块加载器。
+
+不要小看这两句话，任何类库/框架的定位，或者说愿景/目标，最终会决定该类库/框架的方方面面。比如：RequireJ">
+  
+    <link rel="alternative" href="/atom.xml" title="heicx_sudo&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/author.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">heicx_sudo</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">「主页」</a></li>
+				        
+							<li><a href="/tags/Fe-Tech">「FE-Tech」</a></li>
+				        
+							<li><a href="/tags/阅读笔记">「阅读笔记」</a></li>
+				        
+							<li><a href="/archives">「所有文章」</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="http://github.com/heicx" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/sudowukong" title="weibo">weibo</a>
+					        
+								<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/heicx" title="zhihu">zhihu</a>
+					        
+								<a class="twitter" target="_blank" href="https://twitter.com/heicx_sudo" title="twitter">twitter</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/FE-Tech/" style="font-size: 10px;">FE-Tech</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/阅读笔记/" style="font-size: 15px;">阅读笔记</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">纸上得来终觉浅，绝知此事要躬行。</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">heicx_sudo</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/author.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">heicx_sudo</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">「主页」</a></li>
+		        
+					<li><a href="/tags/Fe-Tech">「FE-Tech」</a></li>
+		        
+					<li><a href="/tags/阅读笔记">「阅读笔记」</a></li>
+		        
+					<li><a href="/archives">「所有文章」</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="http://github.com/heicx" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/sudowukong" title="weibo">weibo</a>
+			        
+						<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/heicx" title="zhihu">zhihu</a>
+			        
+						<a class="twitter" target="_blank" href="https://twitter.com/heicx_sudo" title="twitter">twitter</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-从require-js到sea-js" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/12/01/从require-js到sea-js/" class="article-date">
+  	<time datetime="2014-12-01T02:58:37.000Z" itemprop="datePublished">2014-12-01</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      从require.js到sea.js
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FE-Tech/">FE-Tech</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Part1_定位介绍">Part1 定位介绍</h3><ul>
+<li>从 requirejs.org 首页可以得知，RequireJS 是一个 JavaScript 文件和模块加载器，特别为浏览器优化，同时也可运行在 Rhino 和 Node 环境中。</li>
+<li>SeaJS 的定位是一个适用于浏览器端的 JavaScript 模块加载器。</li>
+</ul>
+<p>不要小看这两句话，任何类库/框架的定位，或者说愿景/目标，最终会决定该类库/框架的方方面面。比如：<br>RequireJS 的定位中，除了是模块加载器，还是文件加载器，这决定了 RequireJS 需要实现类似 LABjs 等 script loader 的功能。LABjs 的核心功能是异步加载脚本并提供运行的依赖等待。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$LAB</span><br><span class="line">.script(<span class="string">"a.js"</span>)</span><br><span class="line">.script(<span class="string">"b.js"</span>).wait()</span><br><span class="line">.script(<span class="string">"c.js"</span>);</span><br></pre></td></tr></table></figure>
+<p>为了提供类似功能，RequireJS 开发了 order 插件:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>([<span class="string">"order!one.js"</span>, <span class="string">"order!two.js"</span>, <span class="string">"order!three.js"</span>], <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//This callback is called after the three scripts finish loading.</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>order 功能是 JavaScript 文件加载器必备的功能，RequireJS 有文件加载器的定位，因此才有了 order 插件的设计。<br>而对于 SeaJS 来说，定位为很纯粹的模块加载器，因此不需要考虑普通脚本的 order 加载，如果需要脚本加载功能，直接和 LABjs 一块用就好：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">define(<span class="function"><span class="keyword">function</span>(<span class="params">require</span>) </span>&#123;</span><br><span class="line"><span class="keyword">var</span> $LAB = <span class="built_in">require</span>(<span class="string">'labjs/2.0.3/lab.js'</span>);</span><br><span class="line">$LAB</span><br><span class="line">  .script(<span class="string">'a.js'</span>)</span><br><span class="line">  .script(<span class="string">'b.js'</span>).wait()</span><br><span class="line">  .scrpt(<span class="string">'c.js'</span>);</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>SeaJS 推荐用组合的思路解决问题：LABjs + SeaJS = JavaScript 文件和模块加载器。</p>
+<h3 id="Part2_组成部分">Part2 组成部分</h3><ul>
+<li>RequireJS 提供了三个文件：<ul>
+<li>require.js — 这是核心文件，提供 JavaScript 文件和模块加载功能。</li>
+<li>require-jquery.js — 打包了 jquery 最新版本的 require.js</li>
+<li>r.js — 优化工具，以及让 RequireJS 的模块可运行于 Node 和 Rhino 环境。</li>
+</ul>
+</li>
+<li>SeaJS 提供的内容，目前也有三部分：<ul>
+<li>sea.js — 模块加载器。</li>
+<li>modules — 可运行在 seajs 环境中的推荐模块，在这里下载 modules.seajs.com</li>
+<li>spm 等优化和支持工具。</li>
+</ul>
+</li>
+</ul>
+<h3 id="Part3_插件">Part3 插件</h3><ul>
+<li>RequireJS 提供了一系列插件：text, order, domReady, cs, i18n.</li>
+<li>SeaJS 默认只支持 js 和 css 模块，通过 text、coffee 和 less 插件来扩展支持的模块类型。</li>
+</ul>
+<p>SeaJS 还提供了 map 插件，方便开发调试：在线本地调试大观。对于 order 功能，推荐组合使用 LABjs 来实现。需要 domReady 时，则使用 jQuery 库。至于 i18n, 感觉放在模块加载框架里不太合适，可以做成独立的国际化模块。</p>
+<p>插件实现机制上，RequireJS 采用的是钩子模式：在 require.js 源码中，主动判断并调用插件代码。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// require.js</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">callPlugin</span>(<span class="params">pluginName, depManager</span>) </span>&#123;</span><br><span class="line"><span class="comment">//...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>SeaJS 的实现方式是，和原生 JavaScript 类似，暴露 prototype, 插件开发者通过给 prototype 添加新方法或覆盖原有方法来实现插件功能：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// plugin-xx.js</span></span><br><span class="line">define(funtion(<span class="built_in">require</span>, exports, <span class="built_in">module</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> Require = <span class="built_in">require</span>.constructor;</span><br><span class="line">    <span class="keyword">var</span> Module = <span class="built_in">module</span>.constructor;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// 覆盖原有方法</span></span><br><span class="line">    Require.prototype.resolve = ...</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// 添加新方法</span></span><br><span class="line">    Module.prototype.extend = ...</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>Sea.js官方提供了7个插件，对Sea.js的功能进行了补充。</p>
+<ul>
+<li><p>seajs-text：用来加载HTML或者模板文件。</p>
+</li>
+<li><p>seajs-style：提供了importStyle，动态地向页面中插入css。</p>
+</li>
+<li><p>seajs-combo：该插件提供了依赖combo的功能，能把多个依赖的模块uri combo，减少HTTP请求。</p>
+</li>
+<li><p>seajs-flush：该插件是对seajs-combo的补充，或者是大杀器，可以先hold住前面的模块请求，最后将请求的模块combo成一个url，一次加载hold住的模块。</p>
+</li>
+<li><p>seajs-debug：Fiddler用过么？这个插件基本就是提供了这样一种功能，可以通过修改config，将线上文件proxy到本地服务器，便于线上开发调试和排错。</p>
+</li>
+<li><p>seajs-log：提供一个seajs.log API，私觉得比较鸡肋。</p>
+</li>
+<li><p>seajs-health：目标功能是，分析当前网页的模块健康情况。</p>
+</li>
+</ul>
+<p>由此可见，Sea.js的插件主要是解决一些附加问题，或者是给Sea.js添加一些额外的功能。私觉得有些功能并不合适让Sea.js来处理。</p>
+<h3 id="Part4_模块书写格式">Part4 模块书写格式</h3><p>作为模块加载器，需要明确模块应该怎样写，这就是模块书写格式（Module Authoring Format）。<br>对于文件加载器来说，约定非常少，比如 LABjs 只约定文件里不能有 document.write 等语句。<br>RequireJS 遵守的是 <a href="http://wiki.commonjs.org/wiki/Modules/AsynchronousDefinition" target="_blank" rel="external">AMD</a> 规范，SeaJS 遵守的是 <a href="http://www.seajs.org" target="_blank" rel="external">Simple Wrappings</a> 规范。</p>
+<p>从表面上看，AMD 规范和 Wrappings 规范最大的不同是 factory 函数的参数不一样：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 两者的基本格式都是：</span></span><br><span class="line">define(id?, denpendencies?, factory);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在 AMD 中，factory 的参数由 dependencies 指定：</span></span><br><span class="line">define([<span class="string">'a'</span>], <span class="function"><span class="keyword">function</span>(<span class="params">a</span>) </span>&#123;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在 Wrappings 中，factory 的参数始终是 require, exports, module 三个：</span></span><br><span class="line">define(<span class="function"><span class="keyword">function</span>(<span class="params">require, exports, module</span>) </span>&#123;</span><br><span class="line">     <span class="keyword">var</span> a = <span class="built_in">require</span>(<span class="string">'a'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="Part5_前端项目打包发布脚手架的使用">Part5 前端项目打包发布脚手架的使用</h3><p>The JavaScript Task Runner <a href="http://www.gruntjs.com" target="_blank" rel="external">Grunt.js</a>，上千个插件供于选择，基于Node环境，可以通过NPM安装。可以单独安装，也可以通过对package.json的配置来安装。<br>在针对sea.js前端项目压缩合并打包时，需要将alias依赖关系注入到package.json文件中，在执行grunt xxx命令式时会自动解析补全 define 的 CommonJS规范语法。</p>
+<p>Grunt.js是健壮，扩展性强，支持全面的一个前端构建脚手架，具有类似实现的有FIS及Gulp.js等等。<br>FIS的使用，目前有针对require.js版本项目实现打包方案的mod.js.</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/01/09/「JavaScript高级程序设计」JavaScript简介/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          「JavaScript高级程序设计」JavaScript简介
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="从require-js到sea-js" data-title="从require.js到sea.js" data-url="http://tcka.cn/2014/12/01/从require-js到sea-js/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"tcka"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 heicx_sudo
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>「JavaScript高级程序设计」变量、作用域和内存问题 | heicx_sudo&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="变量、作用域和内存问题4.1  基本类型和引用类型的值
+
+ECMAScript变量包含两种不同数据类型的值：基本类型和引用类型。
+基本类型指的是简单的数据字段，如：undefined，null，boolean，number和string。
+引用类型的值是保存在内存中的对象。JavaScript不允许直接访问内存中的位置，实际操作的是对象的引用。
+
+4.1.1  动态的属性
+
+对于引用类型的值，我们">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「JavaScript高级程序设计」变量、作用域和内存问题">
+<meta property="og:url" content="http://tcka.cn/2015/01/12/「JavaScript高级程序设计」变量、作用域和内存问题/index.html">
+<meta property="og:site_name" content="heicx_sudo's blog">
+<meta property="og:description" content="变量、作用域和内存问题4.1  基本类型和引用类型的值
+
+ECMAScript变量包含两种不同数据类型的值：基本类型和引用类型。
+基本类型指的是简单的数据字段，如：undefined，null，boolean，number和string。
+引用类型的值是保存在内存中的对象。JavaScript不允许直接访问内存中的位置，实际操作的是对象的引用。
+
+4.1.1  动态的属性
+
+对于引用类型的值，我们">
+<meta property="og:updated_time" content="2015-10-10T06:21:26.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="「JavaScript高级程序设计」变量、作用域和内存问题">
+<meta name="twitter:description" content="变量、作用域和内存问题4.1  基本类型和引用类型的值
+
+ECMAScript变量包含两种不同数据类型的值：基本类型和引用类型。
+基本类型指的是简单的数据字段，如：undefined，null，boolean，number和string。
+引用类型的值是保存在内存中的对象。JavaScript不允许直接访问内存中的位置，实际操作的是对象的引用。
+
+4.1.1  动态的属性
+
+对于引用类型的值，我们">
+  
+    <link rel="alternative" href="/atom.xml" title="heicx_sudo&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/author.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">heicx_sudo</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">「主页」</a></li>
+				        
+							<li><a href="/tags/Fe-Tech">「FE-Tech」</a></li>
+				        
+							<li><a href="/tags/阅读笔记">「阅读笔记」</a></li>
+				        
+							<li><a href="/archives">「所有文章」</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="http://github.com/heicx" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/sudowukong" title="weibo">weibo</a>
+					        
+								<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/heicx" title="zhihu">zhihu</a>
+					        
+								<a class="twitter" target="_blank" href="https://twitter.com/heicx_sudo" title="twitter">twitter</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/FE-Tech/" style="font-size: 10px;">FE-Tech</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/阅读笔记/" style="font-size: 15px;">阅读笔记</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">纸上得来终觉浅，绝知此事要躬行。</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">heicx_sudo</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/author.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">heicx_sudo</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">「主页」</a></li>
+		        
+					<li><a href="/tags/Fe-Tech">「FE-Tech」</a></li>
+		        
+					<li><a href="/tags/阅读笔记">「阅读笔记」</a></li>
+		        
+					<li><a href="/archives">「所有文章」</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="http://github.com/heicx" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/sudowukong" title="weibo">weibo</a>
+			        
+						<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/heicx" title="zhihu">zhihu</a>
+			        
+						<a class="twitter" target="_blank" href="https://twitter.com/heicx_sudo" title="twitter">twitter</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-「JavaScript高级程序设计」变量、作用域和内存问题" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/01/12/「JavaScript高级程序设计」变量、作用域和内存问题/" class="article-date">
+  	<time datetime="2015-01-12T12:09:12.000Z" itemprop="datePublished">2015-01-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      「JavaScript高级程序设计」变量、作用域和内存问题
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/阅读笔记/">阅读笔记</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="变量、作用域和内存问题">变量、作用域和内存问题</h2><p>4.1  基本类型和引用类型的值</p>
+<ul>
+<li>ECMAScript变量包含两种不同数据类型的值：基本类型和引用类型。</li>
+<li>基本类型指的是简单的数据字段，如：undefined，null，boolean，number和string。</li>
+<li>引用类型的值是保存在内存中的对象。JavaScript不允许直接访问内存中的位置，实际操作的是对象的引用。</li>
+</ul>
+<p>4.1.1  动态的属性</p>
+<ul>
+<li>对于引用类型的值，我们可以为其添加属性和方法，也可以改变和删除其属性和方法。</li>
+<li>对于基本类型，我们不能给基本类型的值添加属性或者方法，尽管这样不会导致任何错误。</li>
+<li>只能给引用类型的值动态的添加属性和方法。</li>
+</ul>
+<p>4.1.2  复制变量值</p>
+<ul>
+<li><p>如果一个变量向另一个变量复制基本类型的值，那么会再变量对象上创建一个新值，然后把该值复制到新变量分配的位置上。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例如：</span></span><br><span class="line"><span class="keyword">var</span> num1 = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">var</span> num2 = num1;    <span class="comment">//  如果此时修改num1的数值，num2不变。</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果一个变量向另一个变量复制引用类型的值，同样也会将变量复制一份放到新分配的空间。与基本类型复制不同的是，这个值的副本实际是一个指针，这两个变量指向同一个对象。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj1 = &#123;age: <span class="number">5</span>&#125;;</span><br><span class="line"><span class="keyword">var</span> obj2 = obj1;    <span class="comment">//  如果此时修改obj1.age，那么obj2.name也会修改。</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>4.1.3  传递参数</p>
+<ul>
+<li>基本类型的值传递时，函数体内的值一旦变化不会影响外部的参数。</li>
+<li>应用类型的值传递时，函数体内的对象属性一旦发生变化，外部的变量对象也会随之变化。</li>
+</ul>
+<p>4.1.4  检测类型</p>
+<ul>
+<li>通常我们用typeof操作符检测对象类型。</li>
+<li>typeof可以用来确定一个变量是字符串、数值、布尔值、还是undefined。</li>
+<li>如果变量为null，则会返回object。</li>
+<li>我们还可以通过instanceof操作符检测对象是否属于引用对象的实例。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例如：</span></span><br><span class="line">result = variable <span class="keyword">instanceof</span> constructor</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>4.2  执行环境及作用域</p>
+<ul>
+<li>全局执行环境是最外围的一个执行环境，根据ECMAScript实现的宿主环境不同，表示执行环境的对象也不一样。在Web浏览器中，全部执行环境被认为是window对象。</li>
+<li>每个函数都有自己的执行环境。</li>
+<li>在执行环境中时，会创建变量对象的一个作用域链，其用途是保证执行环境中的所有变量和函数有序访问。</li>
+<li>活动对象始终在作用域链的前端，全局执行环境的变量始终都是作用域链的最后一个对象。</li>
+</ul>
+<p>4.2.1  延长作用域链</p>
+<ul>
+<li>执行环境类型分两种：全局和局部（函数）</li>
+<li><p>有些语句可以在作用域链的前端临时增加一个变量对象。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 如下：</span></span><br><span class="line"><span class="comment">// try-catch语句的catch块</span></span><br><span class="line"><span class="comment">// with语句</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>这两个语句都会在作用域链的前端添加一个变量对象。</p>
+</li>
+</ul>
+<p>4.2.2  没有块级作用域</p>
+<ul>
+<li>在if语句中定义变量，如果是在C、C++或Java中，变量会在if语句执行完成后被销毁。但在JavaScript中，if语句中的变量声明会添加到当前的执行环境中。</li>
+<li>for语句初始化所定义的变量，即使在for循环执行结束后，也依旧会存在与循环外部的执行环境中。<ul>
+<li>声明变量<ul>
+<li>使用var声明的变量会自动被添加到最接近的环境中。在函数内部即为局部函数。</li>
+<li>在with语句中，最接近的环境是函数环境。</li>
+<li>如果初始化变量时没有使用var声明，该变量会自动添加到全局环境。</li>
+</ul>
+</li>
+<li>查询标识符<ul>
+<li>查询标识符的搜索过程从作用域链的前端开始，向上逐级查询。如果在局部环境中找到该标识符则停止。如果没有找到则继续向上追溯至全局环境。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>4.3  垃圾收集</p>
+<ul>
+<li>JavaScript具有自动垃圾收集机制。执行环境会负责管理代码执行过程中使用的内存。</li>
+<li>垃圾收集机制的原理：找出那些不再继续使用的变量，然后释放其占用的空间。为此，垃圾收集器会按照固定的时间间隔执行。</li>
+</ul>
+<p>4.3.1  标记清除</p>
+<ul>
+<li>垃圾收集器在运行的过程中会给所有变量都加上标记。它会去掉当前环境中的变量以及引用的变量的标记。在此之后再被加上标记的变量将被视为准备删除的变量，最后垃圾收集器完成内存清除工作。</li>
+</ul>
+<p>4.3.2  引用计数</p>
+<ul>
+<li>引用计数是一种不太常见的垃圾收集策略。</li>
+<li>当声明了一个引用类型的变量时，则这个值的引用次数为1，如果另外一个变量引用了这个值，则引用次数增加1。如果这个引用值又取得了另外一个值，则引用次数减一。</li>
+<li>当这个引用类型变量的引用次数变成0时，其所占用的内存空间将被回收。</li>
+</ul>
+<p>4.3.3  性能问题</p>
+<ul>
+<li>垃圾收集器是周期性运行的。</li>
+<li>IE7重写了垃圾收集例程，因为之前IE的垃圾收集器是根据内存分配量运行的，一旦达到相应临界值变，垃圾收集器便会开始频繁运行。</li>
+</ul>
+<p>4.3.4  管理内存</p>
+<ul>
+<li>一旦数据不再用到，最好通过将其值设置为null来释放其引用——这种做法叫做解除引用。这适用于全局变量和全局对象的属性。</li>
+<li>局部变量会在它们离开执行环境时自动解除引用。</li>
+<li>解除引用不意味立即清除该值所占用内存，只是让值脱离执行环境，去等待垃圾收集器的回收。</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/01/13/「JavaScript高级程序设计」面向对象的程序设计/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          「JavaScript高级程序设计」面向对象的程序设计
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/01/11/「JavaScript高级程序设计」在HTML中使用JavaScript/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">「JavaScript高级程序设计」在HTML中使用JavaScript</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="「JavaScript高级程序设计」变量、作用域和内存问题" data-title="「JavaScript高级程序设计」变量、作用域和内存问题" data-url="http://tcka.cn/2015/01/12/「JavaScript高级程序设计」变量、作用域和内存问题/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"tcka"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 heicx_sudo
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>「JavaScript高级程序设计」基本概念 | heicx_sudo&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="第三章  基本概念3.1  语法
+
+ECMAScript 的语法大量借鉴了C以及类C（如Java和Perl）的语法。
+
+3.1.1  区分大小写
+
+ECMAScript 中的变量、函数名、操作符都区分大小写，例如test和Test是不同的两个变量，undefinded和Undefined也是同样道理。
+
+3.1.2  标识符
+
+标识符就是指变量、函数名、属性的名字，或者是函数的参数。他们有自己的规">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「JavaScript高级程序设计」基本概念">
+<meta property="og:url" content="http://tcka.cn/2015/01/10/「JavaScript高级程序设计」基本概念/index.html">
+<meta property="og:site_name" content="heicx_sudo's blog">
+<meta property="og:description" content="第三章  基本概念3.1  语法
+
+ECMAScript 的语法大量借鉴了C以及类C（如Java和Perl）的语法。
+
+3.1.1  区分大小写
+
+ECMAScript 中的变量、函数名、操作符都区分大小写，例如test和Test是不同的两个变量，undefinded和Undefined也是同样道理。
+
+3.1.2  标识符
+
+标识符就是指变量、函数名、属性的名字，或者是函数的参数。他们有自己的规">
+<meta property="og:updated_time" content="2015-10-10T06:00:24.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="「JavaScript高级程序设计」基本概念">
+<meta name="twitter:description" content="第三章  基本概念3.1  语法
+
+ECMAScript 的语法大量借鉴了C以及类C（如Java和Perl）的语法。
+
+3.1.1  区分大小写
+
+ECMAScript 中的变量、函数名、操作符都区分大小写，例如test和Test是不同的两个变量，undefinded和Undefined也是同样道理。
+
+3.1.2  标识符
+
+标识符就是指变量、函数名、属性的名字，或者是函数的参数。他们有自己的规">
+  
+    <link rel="alternative" href="/atom.xml" title="heicx_sudo&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/author.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">heicx_sudo</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">「主页」</a></li>
+				        
+							<li><a href="/tags/Fe-Tech">「FE-Tech」</a></li>
+				        
+							<li><a href="/tags/阅读笔记">「阅读笔记」</a></li>
+				        
+							<li><a href="/archives">「所有文章」</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="http://github.com/heicx" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/sudowukong" title="weibo">weibo</a>
+					        
+								<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/heicx" title="zhihu">zhihu</a>
+					        
+								<a class="twitter" target="_blank" href="https://twitter.com/heicx_sudo" title="twitter">twitter</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/FE-Tech/" style="font-size: 10px;">FE-Tech</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/阅读笔记/" style="font-size: 15px;">阅读笔记</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">纸上得来终觉浅，绝知此事要躬行。</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">heicx_sudo</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/author.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">heicx_sudo</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">「主页」</a></li>
+		        
+					<li><a href="/tags/Fe-Tech">「FE-Tech」</a></li>
+		        
+					<li><a href="/tags/阅读笔记">「阅读笔记」</a></li>
+		        
+					<li><a href="/archives">「所有文章」</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="http://github.com/heicx" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/sudowukong" title="weibo">weibo</a>
+			        
+						<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/heicx" title="zhihu">zhihu</a>
+			        
+						<a class="twitter" target="_blank" href="https://twitter.com/heicx_sudo" title="twitter">twitter</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-「JavaScript高级程序设计」基本概念" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/01/10/「JavaScript高级程序设计」基本概念/" class="article-date">
+  	<time datetime="2015-01-10T01:09:12.000Z" itemprop="datePublished">2015-01-10</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      「JavaScript高级程序设计」基本概念
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/阅读笔记/">阅读笔记</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="第三章_基本概念">第三章  基本概念</h2><p>3.1  语法</p>
+<ul>
+<li>ECMAScript 的语法大量借鉴了C以及类C（如Java和Perl）的语法。</li>
+</ul>
+<p>3.1.1  区分大小写</p>
+<ul>
+<li>ECMAScript 中的变量、函数名、操作符都区分大小写，例如test和Test是不同的两个变量，undefinded和Undefined也是同样道理。</li>
+</ul>
+<p>3.1.2  标识符</p>
+<ul>
+<li>标识符就是指变量、函数名、属性的名字，或者是函数的参数。他们有自己的规则：<ul>
+<li>第一个字符必须是字母、下划线或一个美元符号。</li>
+<li>其他字符可以是字母、下划线、美元符号、数字。</li>
+<li>不能把保留字、关键字、true、false、null作为标识符。</li>
+</ul>
+</li>
+<li>ECMAScript 标识符推荐采用驼峰式写法：首字母小写，余下每个单词首字母大写。</li>
+</ul>
+<p>3.1.3  注释</p>
+<ul>
+<li>ECMAScript 使用C语言风格注释，其中分单行注释、块级注释。</li>
+</ul>
+<p>3.1.4  严格模式</p>
+<ul>
+<li>ECMAScript 5引入了严格模式（strict mode），严格模式下会对某些不安全的操作抛出异常。</li>
+<li>严格模式关键字为”use strict”，添加关键字至脚本代码顶部或函数体顶部，关键字受作用域影响。</li>
+</ul>
+<p>3.1.5  语句</p>
+<ul>
+<li>ECMAScript 中的语句以分号结尾。如果省略分号，则由解析器确定语句结尾。</li>
+</ul>
+<p>3.3  变量</p>
+<ul>
+<li>ECMAScript 的变量是松散类型，它可以用来保存任何类型的数据。换句话说，每个变量仅仅是一个用于保存数值的占位符。</li>
+<li>var[操作符] message[标识符]</li>
+<li>未做var声明的变量赋值在严格模式下会导致抛出ReferenceError错误。</li>
+</ul>
+<p>3.4  数据类型</p>
+<ul>
+<li>ECMAScript 中有5中简单数据类型，又称基本数据类型：undefined、null、boolean、number、string；还有一种复杂数据类型：Object，Object本质上是由一组无序键值对组成。</li>
+</ul>
+<p>3.4.1  typeof操作符</p>
+<ul>
+<li>typeof是用来检测变量数据类型的操作符。对一个值使用typeof可能会返回下列几个字符串：<ul>
+<li>undefined——值未定义</li>
+<li>boolean——值是布尔值</li>
+<li>string——值是字符串</li>
+<li>number——值是数值</li>
+<li>object——值是对象或null</li>
+<li>function——值是函数对象</li>
+</ul>
+</li>
+</ul>
+<p>3.4.2  Undefined 类型</p>
+<ul>
+<li>通过var声明变量，但没有赋予初始值时，这个变量为undefined。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> message;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> message);  <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>3.4.3 Null 类型</p>
+<ul>
+<li>null值表示一个空对象指针，所以通过typeof检测类型会返回”object”。</li>
+<li>undefined是派生自null值，所以会有如下代码：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="literal">null</span> == <span class="literal">undefined</span>);  <span class="comment">//  true</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>3.4.4  Boolean 类型</p>
+<ul>
+<li>boolean有两个自面值：true和false，并且区分大小写。同时有以下规则：<ul>
+<li>string类型的任何非空字符串会转换为true；空字符串会转换为false。</li>
+<li>number类型的任何非零数字值会转换为true；0和NaN会转换为false。</li>
+<li>object类型的任何对象会转换为true；null会转换为false。</li>
+<li>undefined类型不适用于转换为true；为undefined会转换为false。</li>
+</ul>
+</li>
+</ul>
+<p>3.4.5  Number 类型</p>
+<ul>
+<li>number类型使用IEEE754格式来表示整数和浮点数值。</li>
+<li>最基本的数值字面量格式为十进制。</li>
+<li>除了十进制之外，整数还可以通过八进制表示或十六进制的自面值表示。其中八进制自面值第一位必须为0，后跟八进制数字序列（0-7）；十六进制前两位必须为0x，后跟任何十六进制数字（0-9及A-F）。</li>
+<li>在严格模式下八进制字面量是无效的。</li>
+<li><p>在进行算术计算时，所有八进制和十六进制的数值最终都会将被转换成十进制数值。</p>
+<ul>
+<li>浮点数值</li>
+<li>浮点数值中必须包含一个小数点；保存浮点数值需要的内存空间是保存整数的两倍。<ul>
+<li>如果小数点后面没有跟任何数字或为0，那么这个数值就会以整数值保存。</li>
+<li>可以使用e表示法（科学计数法），2.15e3即2150，e3代表10的3次幂。</li>
+<li>浮点数值的最高精度是17位小数，但是在算术计算时精度却不如整数准确。所以在计算浮点数值加减运算时，先对每个浮点数值做十的倍数化整，计算后再除以这个倍数，已保证计算精度。</li>
+</ul>
+</li>
+<li>数值范围<ul>
+<li>在大多数浏览器中，ECMAScript能够表示的最小数值保存在Number.MIN_VALUE中，保存的最大值在Number.MAX_VALUE中。</li>
+<li>最小值为5e-324，最大值为1.7976931348623157e+308。</li>
+<li>数值是否超出number表示范围，可以通过isFinite()函数判断。</li>
+</ul>
+</li>
+<li><p>NaN</p>
+<ul>
+<li>NaN表示非数值。</li>
+<li>在ECMAScript中0除外的任何数值除以0都会返回+-Infinity，0除以0会返回NaN，而不会报错终止代码。</li>
+<li>NaN与任何值都不相等，包括NaN本身。</li>
+<li>针对NaN的特点，ECMAScript定义了isNaN()函数，用来判断参数”不是数值”的情况：  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例如：</span></span><br><span class="line"><span class="built_in">isNaN</span>(<span class="string">"test"</span>)  <span class="comment">//  返回true</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>数值转换</p>
+<ul>
+<li>Number()——可以将任何数据类型转换为数值。Number()函数的具体转换规则如下：<ul>
+<li>如果是boolean值，true和false将分别转换为1和0.</li>
+<li>如果是数值直接返回。</li>
+<li>如果是null，则返回0.</li>
+<li>如果是undefined，则返回NaN。</li>
+<li>如果是字符串则遵循如下规则：<ul>
+<li>如果只包含数字，则直接转为十进制数值。”123”-&gt;123；”011”-&gt;11。</li>
+<li>如果是浮点的格式，则转为浮点数值，数字前面如果有零同样会忽略。</li>
+<li>如果包含十六进制字符，如”0xf”，则转为相同大小的十进制整数值。</li>
+<li>如果字符串为空，则转为0。</li>
+<li>除此之外的字符串，则转为NaN。</li>
+</ul>
+</li>
+<li>如果是对象，则会调用valueof()函数看看是否会返回boolean类型结果，否则就用toString()来处理。</li>
+</ul>
+</li>
+<li>parseInt()——如果第一个字符不是数字或者符号，则直接返回NaN；如果有空格，则会继续解析，直到遇到非数值或最后一位。</li>
+<li>parseFloat()——与parseInt()用法类似。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>3.4.6  String 类型</p>
+<ul>
+<li>string类型是用于表示由零个或者多个16位unicode字符组成的字符序列，即字符串。</li>
+<li>字符串可以由双引号或者单引号表示。<ul>
+<li>字符字面量<ul>
+<li>string数据类型包含一些特殊字面量，也叫转义序列，如：\n、\r等等。</li>
+<li>string获取字符串长度时，会先对转义序列字符解析，再做字符串长度计算。</li>
+</ul>
+</li>
+<li>字符串的特点<ul>
+<li>ECMAScript中的字符串是不可变的。字符串一旦创建，它们的值是不能改变的。如果要改变某个字符串的变量值，ECMAScript会隐式的分配一个能够容纳新字符串大小的空间并为其赋值，之后再销毁原来的字符串。</li>
+</ul>
+</li>
+<li>转换为字符串<ul>
+<li>转换字符串通过toString()方法，返回结果会以十进制格式返回字符串。同时，还可以有效转换并输出二进制、八进制、十六进制等字符串值。</li>
+<li>null和undefined没有toString()方法。</li>
+<li>如果要判断一个值是不是null或undefined，可以使用String()函数，如果为null或者undefined，会直接返回相应的”null”或”undefined”字符串。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>3.4.7  Object 类型</p>
+<ul>
+<li>ECMAScript中的对象是一组数据或功能的集合。对象可以用过new操作符创建。如果构造函数不需要传参，创建对象时可以省略对象后面的小括号。</li>
+<li>Object类型具有任何属性和方法，每个实例都有如下属性和方法：<ul>
+<li>constructor——对象的创建者，此属性保存着创建当前对象的函数。</li>
+<li>hasOwnProperty(propertyName)——用于检查给定的参数名是否在对象实例中存在(不包括实例原型上的属性)。</li>
+<li>toString()——返回对象的字符串表示。</li>
+<li>valueof()——返回对象的字符串、数值或布尔值表示。通常与toString()方法的返回值相同。</li>
+</ul>
+</li>
+</ul>
+<p>3.5  操作符</p>
+<ul>
+<li>操作符用于操作数据值，包括算术操作符(如加号和减号)、位操作符、关系操作符和相等操作符。</li>
+</ul>
+<p>3.5.1  一元操作符</p>
+<ul>
+<li>一元操作符只能操作一个值。<ul>
+<li>递增和递减操作符——直接借鉴自C，而且有两个版本。前置型和后置型。<ul>
+<li>如果++或者–属于前置型，那么数值会当前+-1，也就是先加减后运算求值。</li>
+<li>如果++或者–属于后置型，那么数值会+-1，但会先运算再做加减。</li>
+</ul>
+</li>
+<li>一元加和减操作符<ul>
+<li>+-符号放在数值前时，不会对结果产生任何影响。</li>
+<li>+-符号在非数值前时，会像Number()转型函数一样。如果是对象则会先调用valueof()或toString()方法，再转换得到数值。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>3.5.2  位操作符</p>
+<ul>
+<li>ECMAScript中所有的数值都是以IEEE-754 64位格式存储，但位操作符并不是直接操作64位的值。而是先将64位的数值转换为32位的整数，然后操作，最后结果再转换为64位用于存储。</li>
+<li><p>关键点：32位中的前31位用于表示整数的值。第32位表示数值的符号：0表示整数，1表示复数。第32位又称符号位。</p>
+<ul>
+<li><p>按位非（NOT）——按位非操作符由一个波浪线（~）表示。结果是当前数值的二进制反码。</p>
+   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例如：</span></span><br><span class="line"><span class="keyword">var</span> num1 = <span class="number">25</span>;     <span class="comment">//         00000000000000000000000000011001</span></span><br><span class="line"><span class="keyword">var</span> num2 = ~num1;  <span class="comment">// 反码为：11111111111111111111111111100110</span></span><br><span class="line"><span class="comment">// 如上：相当于，操作数的负值减1。等同于var num2 = -num1 - 1;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>按位与（AND）——按位与操作符由和号字符表示（&amp;），它的前后有两个操作数。</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例如：</span></span><br><span class="line"><span class="keyword">var</span> result = <span class="number">25</span> &amp; <span class="number">3</span>;</span><br><span class="line"><span class="built_in">console</span>.log(result);  <span class="comment">// 1</span></span><br><span class="line"><span class="number">25</span> =  <span class="number">00000000000000000000000000011001</span></span><br><span class="line"><span class="number">3</span> =    <span class="number">00000000000000000000000000000011</span></span><br><span class="line">————————————————————————————————————————</span><br><span class="line">AND  <span class="number">00000000000000000000000000000001</span></span><br><span class="line"><span class="comment">// 如上：25和3的对应位上只有一位是相同的，那就是1，其他不同的位置自然都是0，因此结果等于1。</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>按位或（OR）——按位或操作符由一个竖线符号表示（|），同样也有两个操作数。两组二进制数值中任何一组中的操作位若为1，直接对应记入相应操作位的结果。</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例如：</span></span><br><span class="line"><span class="keyword">var</span> result = <span class="number">25</span> | <span class="number">3</span>;</span><br><span class="line"><span class="built_in">console</span>.log(result);  <span class="comment">// 27</span></span><br><span class="line"><span class="number">25</span> =  <span class="number">00000000000000000000000000011001</span></span><br><span class="line"><span class="number">3</span> =    <span class="number">00000000000000000000000000000011</span></span><br><span class="line">————————————————————————————————————————</span><br><span class="line">OR     <span class="number">00000000000000000000000000011011</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>按位或（XOR）——按位异或操作符由一个插入符号表示（^），也是由两个操作数。两组二进制数值的对应位都是1或者都是0，返回0，只有一个1时才返回1。</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例如：</span></span><br><span class="line"><span class="keyword">var</span> result = <span class="number">25</span> ^ <span class="number">3</span>;</span><br><span class="line"><span class="built_in">console</span>.log(result);  <span class="comment">// 26</span></span><br><span class="line"><span class="number">25</span> =  <span class="number">00000000000000000000000000011001</span></span><br><span class="line"><span class="number">3</span> =    <span class="number">00000000000000000000000000000011</span></span><br><span class="line">————————————————————————————————————————</span><br><span class="line">XOR   <span class="number">00000000000000000000000000011010</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>左移——左移操作符由两个小于号（&lt;&lt;）表示，操作符会将数值的所有位向左移动指定的位数。</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例如：</span></span><br><span class="line"><span class="keyword">var</span> oldValue = <span class="number">2</span>;</span><br><span class="line"><span class="keyword">var</span> newValue = oldValue &lt;&lt; <span class="number">5</span>;  <span class="comment">//  64</span></span><br><span class="line"><span class="comment">// 00000000000000000000000000000010  // 2</span></span><br><span class="line"><span class="comment">// 00000000000000000000000001000000 // 64</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>有符号右移与左移原理一样，符号由（&gt;&gt;）表示。二进制数值左侧第一位（第32位）为隐藏的符号位，不做移动计算。</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例如：</span></span><br><span class="line">-<span class="number">2</span>&gt;&gt;<span class="number">5</span> = -<span class="number">1</span>;  </span><br><span class="line"><span class="comment">//  1(隐藏的符号位置)1111111111111111111111111111101</span></span><br><span class="line"><span class="comment">//  1(隐藏的符号位置)0000011111111111111111111111111</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>无符号右移，符号由（&gt;&gt;&gt;）表示。与有符号右移原理一样，唯一不同的地方是左侧第一位不会保留隐藏符号位。负的数值右移计算后结果会非常之大。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>3.5.3  布尔操作符</p>
+<ul>
+<li>布尔操作符一共有三个：非（NOT）、与（AND）、或（OR）。<ul>
+<li>逻辑非——逻辑非操作符由一个叹号（!）表示，它用于ECMAScript中的任何值。对其求反。规则如下：<ul>
+<li>如果操作数是一个对象，返回false</li>
+<li>如果操作数是一个空字符串，返回false</li>
+<li>如果操作数是一个非空字符串，返回false</li>
+<li>如果操作数是一个数值0，返回true</li>
+<li>如果操作数是一个任何非0的数值</li>
+<li>如果操作数是nulll，返回true</li>
+<li>如果操作数是NaN，返回true</li>
+<li>如果操作数是undefined，返回true</li>
+</ul>
+</li>
+<li>逻辑与——逻辑与操作符由两个和号（&amp;&amp;）表示。有两个操作数。规则如下：<ul>
+<li>如果第一个操作数是对象，则返回第二个操作数。</li>
+<li>如果第二个操作数是对象，则只有第一个操作数的值为true的情况下会返回该对象。</li>
+<li>如果连个操作数都是对象，则返回第二个操作数。</li>
+<li>如果有一个操作数是null，则返回null。</li>
+<li>如果有一个操作数是NaN，则返回NaN。</li>
+<li>如果有一个操作数undefined，则返回undefined。</li>
+</ul>
+</li>
+<li>逻辑或——逻辑或操作符由两个竖线符号（||）表示，有两个操作数。规则如下：<ul>
+<li>如果第一个操作数是对象，则返回第一操作数。</li>
+<li>如果第一个操作数的求值结果为false，则返回第二个操作数。</li>
+<li>如果两个操作数都是对象，则返回第一个操作数。</li>
+<li>如果两个操作数都是null，则返回null。</li>
+<li>如果两个操作数都是NaN，则返回NaN。</li>
+<li>如果两个操作数都是undefined，则返回undefined。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>3.5.4  乘性操作符</p>
+<ul>
+<li>ECMAScript中定义了三个乘性操作符：乘法、除法、求模，如果操作数为非数值，那么会通过Number()方法自动类型转换。具体规则如下：<ul>
+<li>乘法<ul>
+<li>如果两个操作数的操作符号相同，那么乘积结果为正数。如果乘积结果超过了ECMAScript的数值表示范围。则返回Infinity。</li>
+<li>如果有一个操作数是NaN，则结果为NaN。</li>
+<li>如果是Infinity与非0数值相乘，则结果为Infinity或-Infinity，正负取决于数值。</li>
+<li>如果Infinity与0相乘，则结果为NaN。</li>
+<li>如果Infinity与Infinity相乘，则结果为Infinity。</li>
+<li>如果操作数不是数值，则会在结算之前调用Number()方法将其转换，之后在做运算。</li>
+</ul>
+</li>
+<li>除法<ul>
+<li>与乘法操作符规则类似。</li>
+</ul>
+</li>
+<li>求模<ul>
+<li>求模（余数）操作符由一个百分号（%）表示，与乘法操作符规则类似。</li>
+<li>如果除数为0，则结果为NaN。</li>
+<li>如果被除数是无限大数值，则结果为NaN。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>3.5.5  加性操作符</p>
+<ul>
+<li>加法和减法是算术操作符中最简单的，但是转换规则是最复杂的。<ul>
+<li>加法<ul>
+<li>如果一个操作数是NaN，则结果为NaN。</li>
+<li>如果是Infinity加Infinity，则结果为Infinity。</li>
+<li>如果是-Infinity加-Infinity，则结果为-Infinity。</li>
+<li>如果是Infinity加-Infinity，则结果为NaN。</li>
+<li>如果是+0加+0，则结果为+0。</li>
+<li>如果是-0加-0，则结果为-0。</li>
+<li>如果是+0加-0，则结果为+0。</li>
+<li>如果两个操作数都是字符串类型，则结果为两个字符串的拼接串。</li>
+<li>如果只有一个操作数是字符串，则先将其中的操作数转为字符串，再做字符串拼接。</li>
+<li>如果其中一个操作数是对象，则先调用toString()方法转为字符串，再做拼接。</li>
+</ul>
+</li>
+<li>减法<ul>
+<li>与加法规则类似。</li>
+<li>与加法计算规则不同之处是，如果操作数是非Number的基本数据类型，会先调用Number()再做计算。</li>
+<li>如果操作数是对象，则会先调用valueOf()取得表示该对象的数值。如果该对象没有valueOf()方法，则调用toString()方法并将得到的字符串转为数值。<br>3.5.6  关系操作符</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>如果两个操作数都是数值，则执行数值比较。</li>
+<li>如果两个操作数都是字符串，则比较两个字符串对应的字符编码值。</li>
+<li>如果其中一个操作数是字符串，则将其先转为数值，然后再做比较。</li>
+<li>如果非数值操作数转数值返回为NaN，则关系计算结果始终为false。</li>
+</ul>
+<p>3.5.7  相等操作符</p>
+<ul>
+<li>相等和不相等：先转换在比较。全等和不全等：仅比较而不转换。<ul>
+<li>相等和不相等<ul>
+<li>null和undefined是相等的。</li>
+<li>NaN不等于NaN。</li>
+<li>如果其中一个操作数为字符串，将会先其转为数值再做比较。</li>
+</ul>
+</li>
+<li>全等和不全等<ul>
+<li>不做数值转换，直接进行比较。</li>
+<li>null不全等于undefined</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>3.5.8  条件操作符</p>
+<ul>
+<li>条件操作符又名三元运算符。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">variable = boolean_expression ? true_value : false_value;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>3.5.9  赋值操作符</p>
+<ul>
+<li>赋值操作符由（=）表示，作用是将右侧的值赋给左侧的变量。</li>
+<li>如果在等号的左侧添加乘性操作符、加性操作符或位操作符，就可以完成复合赋值。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例如：</span></span><br><span class="line"><span class="keyword">var</span> num = <span class="number">2</span>;</span><br><span class="line">num &lt;&lt;= <span class="number">5</span>;    <span class="comment">//  num = 64</span></span><br><span class="line">num %= <span class="number">3</span>;     <span class="comment">//   num = 1</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>3.5.10  逗号操作符</p>
+<ul>
+<li>逗号操作符可以在一条语句中执行多个操作。</li>
+<li>逗号操作符可以用于声明多个变量；还可以用于赋值。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例如：</span></span><br><span class="line"><span class="keyword">var</span> num1 = <span class="number">1</span>, num2 = <span class="number">2</span>;</span><br><span class="line"><span class="keyword">var</span> num3 = (<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>);    <span class="comment">//  num3的值为右侧表达式中最后一项，即5。</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>3.6  语句</p>
+<p>3.6.1  if语句</p>
+<ul>
+<li>用于条件判断，两个语句可以是同一行，也可以是代码块。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(codition) statement1 <span class="keyword">else</span> statement2</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>3.6.2  do-while语句</p>
+<ul>
+<li>方法体内的代码至少会被执行一次。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">      statement</span><br><span class="line">  &#125; <span class="keyword">while</span>(expression)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>3.6.3  while语句</p>
+<ul>
+<li>while语句是前测试循环语句(在循环体代码执行之前预判断的语句)，在执行循环体代码之前，会先对当前条件求值。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(expression) statement</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>3.6.4  for语句</p>
+<ul>
+<li>for语句也是前测试循环语句，在执行循环体代码之前，先初始化变量和定义循环后要执行的代码。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (initialization; expression; post-loop-expression)  statement</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>3.6.5  for-in语句</p>
+<ul>
+<li>for-in语句是一种精简迭代的语句，可以用来枚举对象的属性。</li>
+<li>for(property in expression) statement</li>
+</ul>
+<p>3.6.6  label语句</p>
+<ul>
+<li>label语句可以在代码中添加标签，但需要结合break或continue语句使用。</li>
+<li>一般要与for语句等循环语句配合使用。</li>
+<li>label: statement</li>
+</ul>
+<p>3.6.7  break和continue语句</p>
+<ul>
+<li>用于在循环中精确地控制代码执行。</li>
+<li>break语句会立即退出循环。</li>
+<li>continue语句退出当前本次循环，进入到下一次循环。</li>
+</ul>
+<p>3.6.8  with语句</p>
+<ul>
+<li>with语句的作用是将代码的作用域设置到一个特定的对象上。</li>
+<li>严格模式下部能使用with语句。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// with(expression) statement</span></span><br><span class="line"><span class="comment">// 例如：</span></span><br><span class="line"><span class="keyword">var</span> qs = location.search.substring(<span class="number">1</span>);</span><br><span class="line"><span class="keyword">var</span> hostname = location.hostname;</span><br><span class="line">使用<span class="keyword">with</span>后：</span><br><span class="line"><span class="keyword">with</span>(location) &#123;</span><br><span class="line">    <span class="keyword">var</span> qs  = search.substring(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">var</span> hostname = hostname;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>3.6.9  swith语句</p>
+<ul>
+<li>swith语句是一种控制流程的语句。</li>
+<li>swith判断比较时是全等操作符，因此不会发生类型转换。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(expression) &#123;</span><br><span class="line">  <span class="keyword">case</span> value1: statement</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">   <span class="keyword">case</span> value2: statement</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">   <span class="keyword">default</span>: statement</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>3.7  函数</p>
+<ul>
+<li>ECMAScript中的函数使用function关键字来声明，关键字后跟参数以及函数体。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">functionname</span>(<span class="params">args0, args1,.....,argsN</span>) </span>&#123;statement&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>3.7.1  理解参数</p>
+<ul>
+<li>ECMAScript中函数方法的参数在内部是用一个数组来表示的，即arguments。</li>
+<li>arguments对象只是与数组类似，但并不是Array的实例。</li>
+</ul>
+<p>3.7.2  没有重载</p>
+<ul>
+<li>ECMAScript中没有真正意义上的方法重载。</li>
+<li>如果代码上下文中定义了两个同样的函数名，后定义会覆盖先定义的函数。</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/01/11/「JavaScript高级程序设计」在HTML中使用JavaScript/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          「JavaScript高级程序设计」在HTML中使用JavaScript
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/01/09/「JavaScript高级程序设计」JavaScript简介/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">「JavaScript高级程序设计」JavaScript简介</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="「JavaScript高级程序设计」基本概念" data-title="「JavaScript高级程序设计」基本概念" data-url="http://tcka.cn/2015/01/10/「JavaScript高级程序设计」基本概念/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"tcka"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 heicx_sudo
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
