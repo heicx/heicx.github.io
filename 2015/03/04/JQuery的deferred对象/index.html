@@ -5,28 +5,28 @@
   
   <title>JQuery的deferred对象 | heicx_sudo&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JQuery的deferred对象什么是deferred对象？
+  <meta name="description" content="什么是deferred对象？
 deferred对象就是JQuery的回调函数解决方案。它主要解决了如何处理耗时操作的问题。
 首先回顾一下JQuery的ajax操作的传统写法：
 
-123456789$.ajax(function() &amp;#123;	url: &quot;test.html&quot;,	success: function() &amp;#123;		// ...成功	&amp;#125">
+123456789$.ajax(function() &amp;#123;	url: &quot;test.html&quot;,	success: function() &amp;#123;		// ...成功	&amp;#125;,	error: functio">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JQuery的deferred对象">
 <meta property="og:url" content="http://tcka.cn/2015/03/04/JQuery的deferred对象/index.html">
 <meta property="og:site_name" content="heicx_sudo's blog">
-<meta property="og:description" content="JQuery的deferred对象什么是deferred对象？
+<meta property="og:description" content="什么是deferred对象？
 deferred对象就是JQuery的回调函数解决方案。它主要解决了如何处理耗时操作的问题。
 首先回顾一下JQuery的ajax操作的传统写法：
 
-123456789$.ajax(function() &amp;#123;	url: &quot;test.html&quot;,	success: function() &amp;#123;		// ...成功	&amp;#125">
-<meta property="og:updated_time" content="2015-10-19T09:26:10.000Z">
+123456789$.ajax(function() &amp;#123;	url: &quot;test.html&quot;,	success: function() &amp;#123;		// ...成功	&amp;#125;,	error: functio">
+<meta property="og:updated_time" content="2015-10-20T02:00:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JQuery的deferred对象">
-<meta name="twitter:description" content="JQuery的deferred对象什么是deferred对象？
+<meta name="twitter:description" content="什么是deferred对象？
 deferred对象就是JQuery的回调函数解决方案。它主要解决了如何处理耗时操作的问题。
 首先回顾一下JQuery的ajax操作的传统写法：
 
-123456789$.ajax(function() &amp;#123;	url: &quot;test.html&quot;,	success: function() &amp;#123;		// ...成功	&amp;#125">
+123456789$.ajax(function() &amp;#123;	url: &quot;test.html&quot;,	success: function() &amp;#123;		// ...成功	&amp;#125;,	error: functio">
   
     <link rel="alternative" href="/atom.xml" title="heicx_sudo&#39;s blog" type="application/atom+xml">
   
@@ -96,7 +96,7 @@ deferred对象就是JQuery的回调函数解决方案。它主要解决了如何
 						
 							<li><a href="/">「主页」</a></li>
 				        
-							<li><a href="/tags/Fe-Tech">「FE-Tech」</a></li>
+							<li><a href="/tags/FE-Tech">「FE-Tech」</a></li>
 				        
 							<li><a href="/tags/阅读笔记">「阅读笔记」</a></li>
 				        
@@ -122,7 +122,7 @@ deferred对象就是JQuery的回调函数解决方案。它主要解决了如何
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/FE-Tech/" style="font-size: 10px;">FE-Tech</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/阅读笔记/" style="font-size: 15px;">阅读笔记</a>
+						<a href="/tags/CSS3/" style="font-size: 10px;">CSS3</a> <a href="/tags/FE-Tech/" style="font-size: 16.67px;">FE-Tech</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/阅读笔记/" style="font-size: 13.33px;">阅读笔记</a>
 					</div>
 				</section>
 				
@@ -161,7 +161,7 @@ deferred对象就是JQuery的回调函数解决方案。它主要解决了如何
 				
 					<li><a href="/">「主页」</a></li>
 		        
-					<li><a href="/tags/Fe-Tech">「FE-Tech」</a></li>
+					<li><a href="/tags/FE-Tech">「FE-Tech」</a></li>
 		        
 					<li><a href="/tags/阅读笔记">「阅读笔记」</a></li>
 		        
@@ -223,7 +223,7 @@ deferred对象就是JQuery的回调函数解决方案。它主要解决了如何
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="JQuery的deferred对象">JQuery的deferred对象</h1><h2 id="什么是deferred对象？">什么是deferred对象？</h2><ul>
+        <h2 id="什么是deferred对象？">什么是deferred对象？</h2><ul>
 <li>deferred对象就是JQuery的回调函数解决方案。它主要解决了如何处理耗时操作的问题。</li>
 <li>首先回顾一下JQuery的ajax操作的传统写法：</li>
 </ul>
@@ -235,25 +235,25 @@ deferred对象就是JQuery的回调函数解决方案。它主要解决了如何
 <ul>
 <li>如果需要请求多个地址，可以使用 $.when()方法进行调用，$.when()的参数必须是deferred对象。</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$.when($.ajax(<span class="string">"test1.html"</span>), $.ajax(<span class="string">"test2.html"</span>))</span><br><span class="line">.done(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="comment">//…都成功 &#125;)</span></span><br><span class="line">.fail(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="comment">//…失败 &#125;);</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$.when($.ajax(<span class="string">"test1.html"</span>), $.ajax(<span class="string">"test2.html"</span>))</span><br><span class="line">.done(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">	<span class="comment">//…都成功 </span></span><br><span class="line">&#125;)</span><br><span class="line">.fail(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">	<span class="comment">//…失败 </span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <ul>
 <li>deferred.resolve()方法表示已完成，deferred.reject()方法表示已失败，如果执行状态依然为未完成，则继续等待，或者调用progress()方法指定的回调函数。</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> wait = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">var</span> dtd = $.Deferred();</span><br><span class="line"><span class="keyword">var</span> tasks = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="comment">// 执行完毕</span></span><br><span class="line">dtd.resolve();</span><br><span class="line">&#125;</span><br><span class="line">setTimeout(tasks, <span class="number">500</span>);</span><br><span class="line"><span class="keyword">return</span> dtd.promise();</span><br><span class="line">&#125;</span><br><span class="line">$.when(wait())</span><br><span class="line">.done(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;)</span><br><span class="line">.fail(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;);</span><br></pre></td></tr></table></figure>
 <ul>
-<li>另外一种防止执行状态被外部改变的方法，是使用deferred对象的构建函数$.Deferred()。方法参数为函数名。</li>
+<li>另外一种防止执行状态被外部改变的方法，是使用deferred对象的构建函数 $.Deferred()。方法参数为函数名。</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> wait = <span class="function"><span class="keyword">function</span>(<span class="params">dtd</span>) </span>&#123;...&#125;</span><br><span class="line">$.Deferred(wait)</span><br><span class="line">.done(...)</span><br><span class="line">.fail(…);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> wait = <span class="function"><span class="keyword">function</span>(<span class="params">dtd</span>) </span>&#123;...&#125;</span><br><span class="line">$.Deferred(wait)</span><br><span class="line">.done(...)</span><br><span class="line">.fail(...);</span><br></pre></td></tr></table></figure>
 <h2 id="deferred对象的方法">deferred对象的方法</h2><ul>
-<li>$.Deferred(); //生成一个Deferred对象</li>
-<li>deferred.done(); //执行操作成功时的回调函数</li>
-<li>deferred.fail(); //执行操作失败时的回调函数</li>
-<li>deferred.promise(); //没有参数时返回新的deferred对象，接受参数时，在参数对象上部署deferred接口。</li>
-<li>deferred.relove(); //手动改变deferred对象运行状态为“已完成”。</li>
-<li>deferred.reject(); //手动改变deferred对象运行状态为“已失败”。</li>
-<li>deferred.then(); //有时为了省事，将done和fail方法连合在一起。</li>
-<li>$.when(); //为多个操作指定回调函数。</li>
-<li>deferred.always(); //不管函数内部调用的是resole()还是reject()方法，都会执行此方法。</li>
+<li>$.Deferred();         //生成一个Deferred对象</li>
+<li>deferred.done();         //执行操作成功时的回调函数</li>
+<li>deferred.fail();         //执行操作失败时的回调函数</li>
+<li>deferred.promise();     //没有参数时返回新的deferred对象，接受参数时，在参数对象上部署deferred接口。</li>
+<li>deferred.relove();     //手动改变deferred对象运行状态为“已完成”。</li>
+<li>deferred.reject();     //手动改变deferred对象运行状态为“已失败”。</li>
+<li>deferred.then();         //有时为了省事，将done和fail方法连合在一起。</li>
+<li>$.when();             //为多个操作指定回调函数。</li>
+<li>deferred.always();     //不管函数内部调用的是resole()还是reject()方法，都会执行此方法。</li>
 </ul>
 
       
@@ -263,6 +263,15 @@ deferred对象就是JQuery的回调函数解决方案。它主要解决了如何
   
     
 <nav id="article-nav">
+  
+    <a href="/2015/03/06/JavaScript惰性函数/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          JavaScript惰性函数
+        
+      </div>
+    </a>
   
   
     <a href="/2015/03/03/Generator的使用/" id="article-nav-older" class="article-nav-link-wrap">
@@ -323,7 +332,7 @@ deferred对象就是JQuery的回调函数解决方案。它主要解决了如何
     		&copy; 2015 heicx_sudo
     	</div>
       	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      		<a href="https://github.com/heicx" target="_blank">Follow me on Github</a>
       	</div>
     </div>
   </div>

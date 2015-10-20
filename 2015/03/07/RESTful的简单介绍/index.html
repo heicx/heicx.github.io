@@ -3,27 +3,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Generator的使用 | heicx_sudo&#39;s blog</title>
+  <title>RESTful的简单介绍 | heicx_sudo&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Generator函数是ES6中提出的，最大的特点就是可以交出函数的执行权。（即暂停执行）
-整个Generator函数就是一个封装后的异步函数，异步操作需要暂时的地方，都会用yield标示出来。
+  <meta name="description" content="REST这个词，是Roy Thomas Fielding在他2000年的博士论文中提出的。  要理解RESTful架构，最好的方法就是去理解Representational State Transfer这个词组到底是什么意思，它的每一个词代表了什么涵义。
 
-1234567function* gen(x) &amp;#123;	var y = yield x + 2;	return y;&amp;#125;var g = gen(1);g.next();  //  &amp;#12">
+
+REST的名称”表现层状态转化”中，省略了主语。”表现层”其实指的是”资源”（Resources）的”表现层”。“资源”，就是网络上的一个实">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Generator的使用">
-<meta property="og:url" content="http://tcka.cn/2015/03/03/Generator的使用/index.html">
+<meta property="og:title" content="RESTful的简单介绍">
+<meta property="og:url" content="http://tcka.cn/2015/03/07/RESTful的简单介绍/index.html">
 <meta property="og:site_name" content="heicx_sudo's blog">
-<meta property="og:description" content="Generator函数是ES6中提出的，最大的特点就是可以交出函数的执行权。（即暂停执行）
-整个Generator函数就是一个封装后的异步函数，异步操作需要暂时的地方，都会用yield标示出来。
+<meta property="og:description" content="REST这个词，是Roy Thomas Fielding在他2000年的博士论文中提出的。  要理解RESTful架构，最好的方法就是去理解Representational State Transfer这个词组到底是什么意思，它的每一个词代表了什么涵义。
 
-1234567function* gen(x) &amp;#123;	var y = yield x + 2;	return y;&amp;#125;var g = gen(1);g.next();  //  &amp;#12">
-<meta property="og:updated_time" content="2015-10-20T02:35:38.000Z">
+
+REST的名称”表现层状态转化”中，省略了主语。”表现层”其实指的是”资源”（Resources）的”表现层”。“资源”，就是网络上的一个实">
+<meta property="og:updated_time" content="2015-10-20T02:14:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Generator的使用">
-<meta name="twitter:description" content="Generator函数是ES6中提出的，最大的特点就是可以交出函数的执行权。（即暂停执行）
-整个Generator函数就是一个封装后的异步函数，异步操作需要暂时的地方，都会用yield标示出来。
+<meta name="twitter:title" content="RESTful的简单介绍">
+<meta name="twitter:description" content="REST这个词，是Roy Thomas Fielding在他2000年的博士论文中提出的。  要理解RESTful架构，最好的方法就是去理解Representational State Transfer这个词组到底是什么意思，它的每一个词代表了什么涵义。
 
-1234567function* gen(x) &amp;#123;	var y = yield x + 2;	return y;&amp;#125;var g = gen(1);g.next();  //  &amp;#12">
+
+REST的名称”表现层状态转化”中，省略了主语。”表现层”其实指的是”资源”（Resources）的”表现层”。“资源”，就是网络上的一个实">
   
     <link rel="alternative" href="/atom.xml" title="heicx_sudo&#39;s blog" type="application/atom+xml">
   
@@ -183,11 +183,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-Generator的使用" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-RESTful的简单介绍" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/03/03/Generator的使用/" class="article-date">
-  	<time datetime="2015-03-03T07:58:37.000Z" itemprop="datePublished">2015-03-03</time>
+      <a href="/2015/03/07/RESTful的简单介绍/" class="article-date">
+  	<time datetime="2015-03-07T03:18:37.000Z" itemprop="datePublished">2015-03-07</time>
 </a>
     </div>
   
@@ -200,7 +200,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Generator的使用
+      RESTful的简单介绍
     </h1>
   
 
@@ -220,16 +220,33 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li>Generator函数是ES6中提出的，最大的特点就是可以交出函数的执行权。（即暂停执行）</li>
-<li>整个Generator函数就是一个封装后的异步函数，异步操作需要暂时的地方，都会用yield标示出来。</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">gen</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> y = <span class="keyword">yield</span> x + <span class="number">2</span>;</span><br><span class="line">	<span class="keyword">return</span> y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> g = gen(<span class="number">1</span>);</span><br><span class="line">g.next();  <span class="comment">//  &#123;value: 3, done: false&#125;</span></span><br><span class="line">g.next(<span class="number">5</span>);  <span class="comment">//  &#123;value: 5, done: true&#125;</span></span><br></pre></td></tr></table></figure>
+        <blockquote>
+<p>REST这个词，是Roy Thomas Fielding在他2000年的博士论文中提出的。<br>  要理解RESTful架构，最好的方法就是去理解Representational State Transfer这个词组到底是什么意思，它的每一个词代表了什么涵义。</p>
+</blockquote>
 <ul>
-<li>上面的代码中，Generator函数gen所返回的结果为内部指针。</li>
-<li>当调用g.next()时，会移动内部指针到异步任务，即yield后的表达式。</li>
-<li>第二次调用g.next(5)时传入的参数将会作为第一个调用的返回值，赋值给y并返回结果。如果没有传值将会返回value: undefined。</li>
+<li><p>REST的名称”表现层状态转化”中，省略了主语。”表现层”其实指的是”资源”（Resources）的”表现层”。<br>“资源”，就是网络上的一个实体，或者说是网络上的一个具体信息。它可以是一段文本、一张图片、一首歌曲、一种服务，总之就是一个具体的实在。你可以用一个URI（统一资源定位符）指向它，每种资源对应一个特定的URI。</p>
+</li>
+<li><p>Representational State Transfer的解释: </p>
+<ul>
+<li>表现层（Representation）<ul>
+<li>“资源”是一种信息实体，它可以有多种外在表现形式。我们把”资源”具体呈现出来的形式，叫做它的”表现层”（Representation）。</li>
 </ul>
+</li>
+<li>状态转化（State Transfer）<ul>
+<li>如果客户端想要操作服务器，必须通过某种手段，让服务器端发生”状态转化”（State Transfer）。而这种转化是建立在表现层之上的，所以就是”表现层状态转化”。</li>
+<li>HTTP协议里面，四个表示操作方式的动词：GET、POST、PUT、DELETE。它们分别对应四种基本操作：GET用来获取资源，POST用来新建资源（也可以用于更新资源），PUT用来更新资源，DELETE用来删除资源。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>综合上面的解释，我们总结一下什么是RESTful架构：</p>
+<pre><code>-<span class="ruby"> 每一个<span class="constant">URI</span>代表一种资源。
+</span>-<span class="ruby"> 客户端和服务器之间，传递这种资源的某种表现层。
+</span>-<span class="ruby"> 客户端通过四个<span class="constant">HTTP</span>动词，对服务器端资源进行操作，实现<span class="string">"表现层状态转化"</span>。</span>
+</code></pre><p>URI中标准规则中是不应该出现动词做为资源传递，因为资源不能是动词，但它可以是一种服务（名词）。</p>
+</blockquote>
 
       
     </div>
@@ -239,18 +256,18 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/03/04/JQuery的deferred对象/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/03/07/CSS3动画/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          JQuery的deferred对象
+          CSS3动画
         
       </div>
     </a>
   
   
-    <a href="/2015/03/01/PubSub模式/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Pub/Sub模式</div>
+    <a href="/2015/03/06/JavaScript惰性函数/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript惰性函数</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -279,7 +296,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Generator的使用" data-title="Generator的使用" data-url="http://tcka.cn/2015/03/03/Generator的使用/"></div>
+	<div class="ds-thread" data-thread-key="RESTful的简单介绍" data-title="RESTful的简单介绍" data-url="http://tcka.cn/2015/03/07/RESTful的简单介绍/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

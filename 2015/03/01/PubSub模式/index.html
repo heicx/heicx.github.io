@@ -5,16 +5,16 @@
   
   <title>Pub/Sub模式 | heicx_sudo&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="范例123456789101112131415161718192021222324252627282930313233var PubSub = &amp;#123;    //订阅者角色    subscribe : function(ev, callback)&amp;#123;        // 创建_callback对象，除非它已经存在。var calls = this._callback || (thi">
+  <meta name="description" content="范例12345678910111213141516171819202122232425262728293031323334var PubSub = &amp;#123;    //订阅者角色    subscribe : function(ev, callback)&amp;#123;        /*        * 创建_callback对象，除非它已经存在。var calls = this._callb">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Pub/Sub模式">
 <meta property="og:url" content="http://tcka.cn/2015/03/01/PubSub模式/index.html">
 <meta property="og:site_name" content="heicx_sudo's blog">
-<meta property="og:description" content="范例123456789101112131415161718192021222324252627282930313233var PubSub = &amp;#123;    //订阅者角色    subscribe : function(ev, callback)&amp;#123;        // 创建_callback对象，除非它已经存在。var calls = this._callback || (thi">
-<meta property="og:updated_time" content="2015-10-19T09:11:52.000Z">
+<meta property="og:description" content="范例12345678910111213141516171819202122232425262728293031323334var PubSub = &amp;#123;    //订阅者角色    subscribe : function(ev, callback)&amp;#123;        /*        * 创建_callback对象，除非它已经存在。var calls = this._callb">
+<meta property="og:updated_time" content="2015-10-20T01:58:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Pub/Sub模式">
-<meta name="twitter:description" content="范例123456789101112131415161718192021222324252627282930313233var PubSub = &amp;#123;    //订阅者角色    subscribe : function(ev, callback)&amp;#123;        // 创建_callback对象，除非它已经存在。var calls = this._callback || (thi">
+<meta name="twitter:description" content="范例12345678910111213141516171819202122232425262728293031323334var PubSub = &amp;#123;    //订阅者角色    subscribe : function(ev, callback)&amp;#123;        /*        * 创建_callback对象，除非它已经存在。var calls = this._callb">
   
     <link rel="alternative" href="/atom.xml" title="heicx_sudo&#39;s blog" type="application/atom+xml">
   
@@ -84,7 +84,7 @@
 						
 							<li><a href="/">「主页」</a></li>
 				        
-							<li><a href="/tags/Fe-Tech">「FE-Tech」</a></li>
+							<li><a href="/tags/FE-Tech">「FE-Tech」</a></li>
 				        
 							<li><a href="/tags/阅读笔记">「阅读笔记」</a></li>
 				        
@@ -110,7 +110,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/FE-Tech/" style="font-size: 10px;">FE-Tech</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/阅读笔记/" style="font-size: 15px;">阅读笔记</a>
+						<a href="/tags/CSS3/" style="font-size: 10px;">CSS3</a> <a href="/tags/FE-Tech/" style="font-size: 16.67px;">FE-Tech</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/阅读笔记/" style="font-size: 13.33px;">阅读笔记</a>
 					</div>
 				</section>
 				
@@ -149,7 +149,7 @@
 				
 					<li><a href="/">「主页」</a></li>
 		        
-					<li><a href="/tags/Fe-Tech">「FE-Tech」</a></li>
+					<li><a href="/tags/FE-Tech">「FE-Tech」</a></li>
 		        
 					<li><a href="/tags/阅读笔记">「阅读笔记」</a></li>
 		        
@@ -211,7 +211,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="范例">范例</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> PubSub = &#123;</span><br><span class="line">    <span class="comment">//订阅者角色</span></span><br><span class="line">    subscribe : <span class="function"><span class="keyword">function</span>(<span class="params">ev, callback</span>)</span>&#123;</span><br><span class="line">        <span class="comment">// 创建_callback对象，除非它已经存在。var calls = this._callback || (this._callback = &#123;&#125;);</span></span><br><span class="line">        <span class="comment">/*</span><br><span class="line">        * 针对给定的事件ev创建一个数组，除非这个数组已经存在</span><br><span class="line">        * 然后调用函数追加到这个数组中</span><br><span class="line">        * */</span></span><br><span class="line">        (<span class="keyword">this</span>._callback[ev] || (<span class="keyword">this</span>._callback[ev] = [])).push(callback);</span><br><span class="line">        returnthis;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 发布者角色</span></span><br><span class="line">    publish: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">// 将arguments对象转换成为真正的数组var args = Array.prototype.slice.call(arguments,0);</span></span><br><span class="line">        <span class="comment">// 拿出第一个参数，即事件名称var ev = args.shift();</span></span><br><span class="line">        <span class="comment">/*</span><br><span class="line">        * 如果不存在_callback对象，则返回</span><br><span class="line">        * 或者如果不包含给定事件对应的数组</span><br><span class="line">        * */</span></span><br><span class="line">        <span class="keyword">var</span> list, calls, i, l;</span><br><span class="line">        <span class="keyword">if</span>(!(calls = <span class="keyword">this</span>._callback)) returnthis;</span><br><span class="line">        <span class="keyword">if</span>(!(list = <span class="keyword">this</span>._callback[ev])) returnthis;</span><br><span class="line">        	<span class="comment">//触发回调for(i = 0, l = list.length; i &lt; l; i++)&#123;</span></span><br><span class="line">            list[i].apply(<span class="keyword">this</span>,args);</span><br><span class="line">        &#125;</span><br><span class="line">        returnthis;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//调用方式</span></span><br><span class="line">PubSub.subscribe(<span class="string">"wem"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="string">"Wem"</span>);</span><br><span class="line">&#125;);</span><br><span class="line">PubSub.publish(<span class="string">"wem"</span>);</span><br></pre></td></tr></table></figure>
+        <h1 id="范例">范例</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> PubSub = &#123;</span><br><span class="line">    <span class="comment">//订阅者角色</span></span><br><span class="line">    subscribe : <span class="function"><span class="keyword">function</span>(<span class="params">ev, callback</span>)</span>&#123;</span><br><span class="line">        <span class="comment">/*</span><br><span class="line">        * 创建_callback对象，除非它已经存在。var calls = this._callback || (this._callback = &#123;&#125;);</span><br><span class="line">        * 针对给定的事件ev创建一个数组，除非这个数组已经存在</span><br><span class="line">        * 然后调用函数追加到这个数组中</span><br><span class="line">        */</span></span><br><span class="line">        (<span class="keyword">this</span>._callback[ev] || (<span class="keyword">this</span>._callback[ev] = [])).push(callback);</span><br><span class="line">        returnthis;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 发布者角色</span></span><br><span class="line">    publish: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">/*</span><br><span class="line">        * 将arguments对象转换成为真正的数组var args = Array.prototype.slice.call(arguments,0);</span><br><span class="line">        * 拿出第一个参数，即事件名称var ev = args.shift();</span><br><span class="line">        * 如果不存在_callback对象，则返回</span><br><span class="line">        * 或者如果不包含给定事件对应的数组</span><br><span class="line">        */</span></span><br><span class="line">        <span class="keyword">var</span> list, calls, i, l;</span><br><span class="line">        <span class="keyword">if</span>(!(calls = <span class="keyword">this</span>._callback)) returnthis;</span><br><span class="line">        <span class="keyword">if</span>(!(list = <span class="keyword">this</span>._callback[ev])) returnthis;</span><br><span class="line">        	<span class="comment">//触发回调</span></span><br><span class="line">        	<span class="keyword">for</span>(i = <span class="number">0</span>, l = list.length; i &lt; l; i++)&#123;</span><br><span class="line">	            list[i].apply(<span class="keyword">this</span>,args);</span><br><span class="line">	        &#125;</span><br><span class="line">	        returnthis;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//调用方式</span></span><br><span class="line">PubSub.subscribe(<span class="string">"wem"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="string">"Wem"</span>);</span><br><span class="line">&#125;);</span><br><span class="line">PubSub.publish(<span class="string">"wem"</span>);</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>发布者和订阅者的解耦可以让你的运用易于拓展，而不必引入额外的交叉依赖的耦合，从而提高了运用的可维护性，添加额外功能也非常容易。</p>
 </blockquote>
@@ -292,7 +292,7 @@
     		&copy; 2015 heicx_sudo
     	</div>
       	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      		<a href="https://github.com/heicx" target="_blank">Follow me on Github</a>
       	</div>
     </div>
   </div>

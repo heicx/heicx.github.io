@@ -3,27 +3,30 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Generator的使用 | heicx_sudo&#39;s blog</title>
+  <title>JavaScript惰性函数 | heicx_sudo&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Generator函数是ES6中提出的，最大的特点就是可以交出函数的执行权。（即暂停执行）
-整个Generator函数就是一个封装后的异步函数，异步操作需要暂时的地方，都会用yield标示出来。
+  <meta name="description" content="如果只调用一次是体现不出它的优点的，用的次数越多越能体现这种模式的优势所在。
+对函数体进行重写后通过return语句，调用重写函数，从而执行重写代码。
+如果函数体内有许多的判断逻辑，惰性重写可以提高代码执行性能，绕开逻辑检测。
 
-1234567function* gen(x) &amp;#123;	var y = yield x + 2;	return y;&amp;#125;var g = gen(1);g.next();  //  &amp;#12">
+123456789101112var status = true;function overload (a, b) &amp;#123;	if(status) &amp;#123;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Generator的使用">
-<meta property="og:url" content="http://tcka.cn/2015/03/03/Generator的使用/index.html">
+<meta property="og:title" content="JavaScript惰性函数">
+<meta property="og:url" content="http://tcka.cn/2015/03/06/JavaScript惰性函数/index.html">
 <meta property="og:site_name" content="heicx_sudo's blog">
-<meta property="og:description" content="Generator函数是ES6中提出的，最大的特点就是可以交出函数的执行权。（即暂停执行）
-整个Generator函数就是一个封装后的异步函数，异步操作需要暂时的地方，都会用yield标示出来。
+<meta property="og:description" content="如果只调用一次是体现不出它的优点的，用的次数越多越能体现这种模式的优势所在。
+对函数体进行重写后通过return语句，调用重写函数，从而执行重写代码。
+如果函数体内有许多的判断逻辑，惰性重写可以提高代码执行性能，绕开逻辑检测。
 
-1234567function* gen(x) &amp;#123;	var y = yield x + 2;	return y;&amp;#125;var g = gen(1);g.next();  //  &amp;#12">
-<meta property="og:updated_time" content="2015-10-20T02:35:38.000Z">
+123456789101112var status = true;function overload (a, b) &amp;#123;	if(status) &amp;#123;">
+<meta property="og:updated_time" content="2015-10-20T02:07:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Generator的使用">
-<meta name="twitter:description" content="Generator函数是ES6中提出的，最大的特点就是可以交出函数的执行权。（即暂停执行）
-整个Generator函数就是一个封装后的异步函数，异步操作需要暂时的地方，都会用yield标示出来。
+<meta name="twitter:title" content="JavaScript惰性函数">
+<meta name="twitter:description" content="如果只调用一次是体现不出它的优点的，用的次数越多越能体现这种模式的优势所在。
+对函数体进行重写后通过return语句，调用重写函数，从而执行重写代码。
+如果函数体内有许多的判断逻辑，惰性重写可以提高代码执行性能，绕开逻辑检测。
 
-1234567function* gen(x) &amp;#123;	var y = yield x + 2;	return y;&amp;#125;var g = gen(1);g.next();  //  &amp;#12">
+123456789101112var status = true;function overload (a, b) &amp;#123;	if(status) &amp;#123;">
   
     <link rel="alternative" href="/atom.xml" title="heicx_sudo&#39;s blog" type="application/atom+xml">
   
@@ -183,11 +186,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-Generator的使用" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-JavaScript惰性函数" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/03/03/Generator的使用/" class="article-date">
-  	<time datetime="2015-03-03T07:58:37.000Z" itemprop="datePublished">2015-03-03</time>
+      <a href="/2015/03/06/JavaScript惰性函数/" class="article-date">
+  	<time datetime="2015-03-06T04:08:37.000Z" itemprop="datePublished">2015-03-06</time>
 </a>
     </div>
   
@@ -200,7 +203,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Generator的使用
+      JavaScript惰性函数
     </h1>
   
 
@@ -221,16 +224,11 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li>Generator函数是ES6中提出的，最大的特点就是可以交出函数的执行权。（即暂停执行）</li>
-<li>整个Generator函数就是一个封装后的异步函数，异步操作需要暂时的地方，都会用yield标示出来。</li>
+<li>如果只调用一次是体现不出它的优点的，用的次数越多越能体现这种模式的优势所在。</li>
+<li>对函数体进行重写后通过return语句，调用重写函数，从而执行重写代码。</li>
+<li>如果函数体内有许多的判断逻辑，惰性重写可以提高代码执行性能，绕开逻辑检测。</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">gen</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> y = <span class="keyword">yield</span> x + <span class="number">2</span>;</span><br><span class="line">	<span class="keyword">return</span> y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> g = gen(<span class="number">1</span>);</span><br><span class="line">g.next();  <span class="comment">//  &#123;value: 3, done: false&#125;</span></span><br><span class="line">g.next(<span class="number">5</span>);  <span class="comment">//  &#123;value: 5, done: true&#125;</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>上面的代码中，Generator函数gen所返回的结果为内部指针。</li>
-<li>当调用g.next()时，会移动内部指针到异步任务，即yield后的表达式。</li>
-<li>第二次调用g.next(5)时传入的参数将会作为第一个调用的返回值，赋值给y并返回结果。如果没有传值将会返回value: undefined。</li>
-</ul>
-
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> status = <span class="literal">true</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">overload</span> (<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(status) &#123;</span><br><span class="line">	      overload = <span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">"true"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	   &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">"false"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> overload(a, b);</span><br><span class="line">&#125;</span><br><span class="line">overload(<span class="number">1</span>, <span class="number">2</span>);</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -239,18 +237,18 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/03/04/JQuery的deferred对象/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/03/07/RESTful的简单介绍/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          JQuery的deferred对象
+          RESTful的简单介绍
         
       </div>
     </a>
   
   
-    <a href="/2015/03/01/PubSub模式/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Pub/Sub模式</div>
+    <a href="/2015/03/04/JQuery的deferred对象/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JQuery的deferred对象</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -279,7 +277,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Generator的使用" data-title="Generator的使用" data-url="http://tcka.cn/2015/03/03/Generator的使用/"></div>
+	<div class="ds-thread" data-thread-key="JavaScript惰性函数" data-title="JavaScript惰性函数" data-url="http://tcka.cn/2015/03/06/JavaScript惰性函数/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

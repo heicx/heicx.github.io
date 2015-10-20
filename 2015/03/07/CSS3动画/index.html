@@ -3,27 +3,44 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Generator的使用 | heicx_sudo&#39;s blog</title>
+  <title>CSS3动画 | heicx_sudo&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Generator函数是ES6中提出的，最大的特点就是可以交出函数的执行权。（即暂停执行）
-整个Generator函数就是一个封装后的异步函数，异步操作需要暂时的地方，都会用yield标示出来。
+  <meta name="description" content="这个话题比较大，其中涉猎的知识点与技术主要有如下几部分组成。
+transform - 使元素改变形态。
 
-1234567function* gen(x) &amp;#123;	var y = yield x + 2;	return y;&amp;#125;var g = gen(1);g.next();  //  &amp;#12">
+
+transform属性一旦设定好便会直接显示在页面，不会有动画效果。
+transform有五个改变元素样式的属性。
+translate3d(x, y, z)  - 用来控制元素在页面x, y, z三个轴的位置。
+rotate(deg) - 用来控制元素的旋转角度。
+skew([x, y])(">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Generator的使用">
-<meta property="og:url" content="http://tcka.cn/2015/03/03/Generator的使用/index.html">
+<meta property="og:title" content="CSS3动画">
+<meta property="og:url" content="http://tcka.cn/2015/03/07/CSS3动画/index.html">
 <meta property="og:site_name" content="heicx_sudo's blog">
-<meta property="og:description" content="Generator函数是ES6中提出的，最大的特点就是可以交出函数的执行权。（即暂停执行）
-整个Generator函数就是一个封装后的异步函数，异步操作需要暂时的地方，都会用yield标示出来。
+<meta property="og:description" content="这个话题比较大，其中涉猎的知识点与技术主要有如下几部分组成。
+transform - 使元素改变形态。
 
-1234567function* gen(x) &amp;#123;	var y = yield x + 2;	return y;&amp;#125;var g = gen(1);g.next();  //  &amp;#12">
-<meta property="og:updated_time" content="2015-10-20T02:35:38.000Z">
+
+transform属性一旦设定好便会直接显示在页面，不会有动画效果。
+transform有五个改变元素样式的属性。
+translate3d(x, y, z)  - 用来控制元素在页面x, y, z三个轴的位置。
+rotate(deg) - 用来控制元素的旋转角度。
+skew([x, y])(">
+<meta property="og:image" content="http://tcka.cn/img/imgs-css3/css3动画-01.png">
+<meta property="og:image" content="http://tcka.cn/img/imgs-css3/css3动画-02.png">
+<meta property="og:updated_time" content="2015-10-20T02:42:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Generator的使用">
-<meta name="twitter:description" content="Generator函数是ES6中提出的，最大的特点就是可以交出函数的执行权。（即暂停执行）
-整个Generator函数就是一个封装后的异步函数，异步操作需要暂时的地方，都会用yield标示出来。
+<meta name="twitter:title" content="CSS3动画">
+<meta name="twitter:description" content="这个话题比较大，其中涉猎的知识点与技术主要有如下几部分组成。
+transform - 使元素改变形态。
 
-1234567function* gen(x) &amp;#123;	var y = yield x + 2;	return y;&amp;#125;var g = gen(1);g.next();  //  &amp;#12">
+
+transform属性一旦设定好便会直接显示在页面，不会有动画效果。
+transform有五个改变元素样式的属性。
+translate3d(x, y, z)  - 用来控制元素在页面x, y, z三个轴的位置。
+rotate(deg) - 用来控制元素的旋转角度。
+skew([x, y])(">
   
     <link rel="alternative" href="/atom.xml" title="heicx_sudo&#39;s blog" type="application/atom+xml">
   
@@ -183,11 +200,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-Generator的使用" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-CSS3动画" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/03/03/Generator的使用/" class="article-date">
-  	<time datetime="2015-03-03T07:58:37.000Z" itemprop="datePublished">2015-03-03</time>
+      <a href="/2015/03/07/CSS3动画/" class="article-date">
+  	<time datetime="2015-03-07T10:58:37.000Z" itemprop="datePublished">2015-03-07</time>
 </a>
     </div>
   
@@ -200,7 +217,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Generator的使用
+      CSS3动画
     </h1>
   
 
@@ -209,7 +226,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FE-Tech/">FE-Tech</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FE-Tech/">FE-Tech</a></li></ul>
 	</div>
 
         
@@ -220,15 +237,33 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li>Generator函数是ES6中提出的，最大的特点就是可以交出函数的执行权。（即暂停执行）</li>
-<li>整个Generator函数就是一个封装后的异步函数，异步操作需要暂时的地方，都会用yield标示出来。</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">gen</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> y = <span class="keyword">yield</span> x + <span class="number">2</span>;</span><br><span class="line">	<span class="keyword">return</span> y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> g = gen(<span class="number">1</span>);</span><br><span class="line">g.next();  <span class="comment">//  &#123;value: 3, done: false&#125;</span></span><br><span class="line">g.next(<span class="number">5</span>);  <span class="comment">//  &#123;value: 5, done: true&#125;</span></span><br></pre></td></tr></table></figure>
+        <h2 id="这个话题比较大，其中涉猎的知识点与技术主要有如下几部分组成。">这个话题比较大，其中涉猎的知识点与技术主要有如下几部分组成。</h2><blockquote>
+<p>transform - 使元素改变形态。</p>
+</blockquote>
 <ul>
-<li>上面的代码中，Generator函数gen所返回的结果为内部指针。</li>
-<li>当调用g.next()时，会移动内部指针到异步任务，即yield后的表达式。</li>
-<li>第二次调用g.next(5)时传入的参数将会作为第一个调用的返回值，赋值给y并返回结果。如果没有传值将会返回value: undefined。</li>
+<li>transform属性一旦设定好便会直接显示在页面，不会有动画效果。</li>
+<li>transform有五个改变元素样式的属性。</li>
+<li>translate3d(x, y, z)  - 用来控制元素在页面x, y, z三个轴的位置。</li>
+<li>rotate(deg) - 用来控制元素的旋转角度。</li>
+<li>skew([x, y])(deg) - 这个属性用来控制元素的倾斜角。</li>
+<li>scale3d(x, y, z) - 用来控制元素的放大与缩小。</li>
+<li>matrix3d - css矩阵，涵盖上面所有属性值。可读性差，不常用。</li>
+</ul>
+<blockquote>
+<p>transition - 简单的动画属性，主要用于一些过渡效果，如贝兹。</p>
+</blockquote>
+<ul>
+<li>transition属性非常易用，可以理解为animation的简化版。</li>
+<li>当元素的某个属性值发生变化时会触发transtion的动画效果。</li>
+<li>transtion执行动画的过程中如果属性又有变动，则会中断重新开始。</li>
+<li>transtion属性有4个过渡属性：property、duration、timing-function、delay。分别为css属性名称[默认为all]、过渡耗时、速度效果、过渡效果开始延迟。<br><img src="/img/imgs-css3/css3动画-01.png" alt="1.png"></li>
+</ul>
+<blockquote>
+<p> animation - transtion属性的扩展，功能更强。</p>
+</blockquote>
+<ul>
+<li>animation动画主要动过keyframes关键字属性设置时间轴和样式。</li>
+<li>可以动态添加样式触发动画，也可以指定好class，在页面加载后自动触发。<br><img src="/img/imgs-css3/css3动画-02.png" alt="1.png"></li>
 </ul>
 
       
@@ -239,18 +274,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/03/04/JQuery的deferred对象/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          JQuery的deferred对象
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/03/01/PubSub模式/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Pub/Sub模式</div>
+    <a href="/2015/03/07/RESTful的简单介绍/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">RESTful的简单介绍</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -279,7 +305,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Generator的使用" data-title="Generator的使用" data-url="http://tcka.cn/2015/03/03/Generator的使用/"></div>
+	<div class="ds-thread" data-thread-key="CSS3动画" data-title="CSS3动画" data-url="http://tcka.cn/2015/03/07/CSS3动画/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
